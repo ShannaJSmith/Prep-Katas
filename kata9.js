@@ -12,10 +12,21 @@ for (let i = 0; i < array.length; i++) {
 return array.join("");
 };
 
+// MAP solution
+// const camelCase = (input) => {
+//   let array = input.split(" ");
+//   let answer = array.map((word, index) => {
+//     if (index === 0) {
+//       return word.toLowerCase();
+//     }
+//     return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+//   })
+//   return answer.join("");
+// }
 
-console.log(camelCase("this is a string"));
-console.log(camelCase("loopy lighthouse"));
-console.log(camelCase("supercalifragalisticexpialidocious"));
+console.log(camelCase('this is a string'))
+console.log(camelCase('loopy lighthouse'))
+console.log(camelCase('supercalifragalisticexpialidocious'))
 
 // Expected Output
 // thisIsAString6
