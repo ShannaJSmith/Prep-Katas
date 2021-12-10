@@ -21,16 +21,19 @@
 
 // console.log(pascalCase('this is a string'))
 
-const snakeCase = (input) => {
-  let array = input.split(" ")
-  return array.join("_")
+// const snakeCase = (input) => {
+//   let array = input.split(" ");
+//   return array.join("_")
+// }
+
+// console.log(snakeCase('this is a string'))
+
+const kebabCase = (input) => {
+  let array = input.split(" ");
+  return array.join("-")
 }
 
-console.log(snakeCase('this is a string'))
-
-// const kebabCase = (input) => {
-  
-// }
+console.log(kebabCase('this is a string'))
 
 // const titleCase = (input) => {
   
