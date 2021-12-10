@@ -97,17 +97,25 @@ console.log(lowerCase('this is a string'))
 
 
 const makeCase = function (input, caseType) {
-  // let array = input.split(' ');
+  // let finalAnswer = "";
     if (caseType === 'camel') {
+      return camelCase(input);
     } else if (caseType === 'pascal') {
+      return pascalCase(input);
     } else if (caseType === 'snake') {
+      return snakeCase(input);
     } else if (caseType === 'kebab') {
+      return kebabCase(input);
     } else if (caseType === 'title') {
+      return titleCase(input);
     } else if (caseType === 'vowel') {
+      return vowelCase(input);
     } else if (caseType === 'consonant') {
-    } else caseType === 'upper' && caseType === 'snake'
+      return consonantCase(input);
+    } else (caseType === 'upper') 
+      return upperCase(input);
 }
-
+console.log("-----------------------------------")
 console.log(makeCase('this is a string', 'camel'))
 console.log(makeCase('this is a string', 'pascal'))
 console.log(makeCase('this is a string', 'snake'))
@@ -115,7 +123,7 @@ console.log(makeCase('this is a string', 'kebab'))
 console.log(makeCase('this is a string', 'title'))
 console.log(makeCase('this is a string', 'vowel'))
 console.log(makeCase('this is a string', 'consonant'))
-console.log(makeCase('this is a string', ['upper', 'snake']))
+console.log(makeCase('this is a string', ['upper', 'snake'])) // <- STILL NEED TO CONFIRM THIS CONDITION
 
 // Expected Output:
 // thisIsAString
