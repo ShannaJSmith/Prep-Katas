@@ -35,17 +35,33 @@
 
 // console.log(kebabCase('this is a string'))
 
-const titleCase = (input) => {
-  let array = input.split(' ');
-  let answer = array.map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-  return answer.join(" ");
+// const titleCase = (input) => {
+//   let array = input.split(" ");
+//   let answer = array.map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+//   return answer.join(" ");
+// }
+
+// console.log(titleCase('this is a string'))
+
+const vowelCase = (input) => {
+  let string = '';
+  for (let index = 0; index < input.length; index++) {
+    if (
+      input[index] === 'a' ||
+      input[index] === 'e' ||
+      input[index] === 'i' ||
+      input[index] === 'o' ||
+      input[index] === 'u'
+    ) {
+      string += input[index].toUpperCase();
+    } else {
+      string += input[index];
+    }
+  }
+  return string;
 }
 
-console.log(titleCase('this is a string'))
-
-// const vowelCase = (input) => {
-
-// }
+console.log(vowelCase('this is a string'))
 
 // const consonantCase = (input) => {
 
