@@ -28,36 +28,40 @@
 
 // console.log(snakeCase('this is a string'))
 
-const kebabCase = (input) => {
-  let array = input.split(" ");
-  return array.join("-")
-}
-
-console.log(kebabCase('this is a string'))
-
-// const titleCase = (input) => {
-  
+// const kebabCase = (input) => {
+//   let array = input.split(" ");
+//   return array.join("-")
 // }
 
+// console.log(kebabCase('this is a string'))
+
+const titleCase = (input) => {
+  let array = input.split(' ');
+  let answer = array.map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+  return answer.join(" ");
+}
+
+console.log(titleCase('this is a string'))
+
 // const vowelCase = (input) => {
-  
+
 // }
 
 // const consonantCase = (input) => {
-  
+
 // }
 
 // const upperCase = (input) => {
-  
+
 // }
 
 // const lowerCase = (input) => {
-  
+
 // }
 
 // const makeCase = function (input, caseType) {
 //   let array = input.split(' ');
-//     if (caseType === 'camel') { 
+//     if (caseType === 'camel') {
 //     } else if (caseType === 'pascal') {
 //     } else if (caseType === 'snake') {
 //     } else if (caseType === 'kebab') {
