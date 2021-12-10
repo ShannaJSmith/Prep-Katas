@@ -43,37 +43,56 @@
 
 // console.log(titleCase('this is a string'))
 
-const vowelCase = (input) => {
-  let string = '';
-  for (let index = 0; index < input.length; index++) {
-    if (
-      input[index] === 'a' ||
-      input[index] === 'e' ||
-      input[index] === 'i' ||
-      input[index] === 'o' ||
-      input[index] === 'u'
-    ) {
-      string += input[index].toUpperCase();
-    } else {
-      string += input[index];
-    }
-  }
-  return string;
-}
+// const vowelCase = (input) => {
+//   let string = '';
+//   for (let index = 0; index < input.length; index++) {
+//     if (
+//       input[index] === 'a' ||
+//       input[index] === 'e' ||
+//       input[index] === 'i' ||
+//       input[index] === 'o' ||
+//       input[index] === 'u'
+//     ) {
+//       string += input[index].toUpperCase();
+//     } else {
+//       string += input[index];
+//     }
+//   }
+//   return string;
+// }
 
-console.log(vowelCase('this is a string'))
+// console.log(vowelCase('this is a string'))
 
 // const consonantCase = (input) => {
-
+//   let string = '';
+//   for (let index = 0; index < input.length; index++) {
+//     if (
+//       input[index] === 'a' ||
+//       input[index] === 'e' ||
+//       input[index] === 'i' ||
+//       input[index] === 'o' ||
+//       input[index] === 'u'
+//     ) {
+//       string += input[index]
+//     } else {
+//       string += input[index].toUpperCase();
+//     }
+//   }
+//   return string;
 // }
 
-// const upperCase = (input) => {
+// console.log(consonantCase('this is a string'))
 
-// }
+const upperCase = (input) => {
+
+}
+console.log(upperCase('this is a string'))
 
 // const lowerCase = (input) => {
 
 // }
+
+// console.log(lowerCase('this is a string'))
 
 // const makeCase = function (input, caseType) {
 //   let array = input.split(' ');
