@@ -1,35 +1,37 @@
-"use strict";
+'use strict';
 
-let prompt = require("prompt-sync")();
+let prompt = require('prompt-sync')();
 
-// Generate random integer 
+// Generate random integer
 const getRandonNumber = (max) => {
   return Math.floor(Math.random() * max);
 }
 
 let answer = getRandonNumber(10);
+let guess
 let attempts = 0;
 
-// code below (replace this example)
-let guess = prompt("Guess a number: ");
-console.log("You answered: " + guess);
-
-if (isNaN(guess)) {
-  console.log("That's not a number!")
+do {
+  guess = prompt('Guess a number: '); 
+  console.log('You answered: ' + guess);
+  console.log(answer)
+  if (guess === 'q') {
+    break;
+  } else if (isNaN(guess)) {
+      console.log("That's not a number!");
+  } else if (guess < answer) {
+    console.log('Too low! Try again :)');
+  } else if (guess > answer) {
+    console.log('Too high! Try again :)');
+  }  
+} while (guess !== answer) {
+  console.log(`That's correct! You took ${attempts} attempts!`);
+  break; // illegal use?
 }
-else if (guess < answer) {
-  console.log("Too low! Try again :)")
-} 
-else if (guess > answer) {
-  console.log("Too high! Try again :)")
-}
-else if (guess === answer) {
-  console.log(`That's correct! You took ${attempts} guesses!`)
-} 
+  
 
-
-
-
+    
+  
 
 // Sample output
 // Lines preceded with > are provided by the user.
