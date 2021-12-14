@@ -8,30 +8,33 @@ const getRandonNumber = (max) => {
 }
 
 let answer = getRandonNumber(10);
-let guess
+let guess = prompt('Guess a number: '); 
+
+// let guess;
 let attempts = 0;
 
-do {
-  guess = prompt('Guess a number: '); 
-  console.log('You answered: ' + guess);
-  console.log(answer)
+while (guess !== answer) {
+// guess = prompt('Guess a number: '); 
+console.log('You answered: ' + guess);
+console.log(answer)
+// use 'q' to exit game loop at any time
   if (guess === 'q') {
     break;
-  } else if (isNaN(guess)) {
-      console.log("That's not a number!");
+  }
+  if (isNaN(guess)) {
+    console.log("That's not a number!");
   } else if (guess < answer) {
+    attempts++
     console.log('Too low! Try again :)');
   } else if (guess > answer) {
+    attempts++
     console.log('Too high! Try again :)');
-  }  
-} while (guess !== answer) {
-  console.log(`That's correct! You took ${attempts} attempts!`);
-  break; // illegal use?
+  } else if (guess === answer) {
+    console.log(`That's correct! You took ${attempts} attempts!`)
+    break;
+  }
 }
-  
 
-    
-  
 
 // Sample output
 // Lines preceded with > are provided by the user.
