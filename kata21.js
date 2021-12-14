@@ -1,17 +1,34 @@
-// "use strict";
+"use strict";
 
-// let prompt = require("prompt-sync")();
+let prompt = require("prompt-sync")();
 
-// // code below (replace this example)
-// let answer = prompt("Guess a number: ");
-// console.log("You answered: " + answer);
-
-// function to get random integer
+// Generate random integer 
 const getRandonNumber = (max) => {
   return Math.floor(Math.random() * max);
 }
 
-console.log(getRandonNumber(1000))
+let answer = getRandonNumber(10);
+let attempts = 0;
+
+// code below (replace this example)
+let guess = prompt("Guess a number: ");
+console.log("You answered: " + guess);
+
+if (isNaN(guess)) {
+  console.log("That's not a number!")
+}
+else if (guess < answer) {
+  console.log("Too low! Try again :)")
+} 
+else if (guess > answer) {
+  console.log("Too high! Try again :)")
+}
+else if (guess === answer) {
+  console.log(`That's correct! You took ${attempts} guesses!`)
+} 
+
+
+
 
 
 // Sample output
