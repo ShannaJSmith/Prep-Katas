@@ -5,6 +5,15 @@
 
 let whiteQueen = [0, 5];
 let blackQueen = [5, 0];
+
+const generateBoard = () => {
+// will return game board containing location of 2 queens
+}
+
+const queenThreat = () => {
+// will return true or false
+}
+
 let generatedBoard = generateBoard(whiteQueen, blackQueen);
 console.log(generatedBoard);
 console.log(queenThreat(generatedBoard));
