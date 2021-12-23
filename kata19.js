@@ -1,3 +1,8 @@
+// a queen can attack pieces which are on the same row, column, or diagonal.
+
+// Create a function generateBoard which will return a nested array representing the board, containing the location of two queens.
+// Create a function called queenThreat that will indicate whether or not the two queens are positioned so that they attack each other.
+
 let whiteQueen = [0, 5];
 let blackQueen = [5, 0];
 let generatedBoard = generateBoard(whiteQueen, blackQueen);
