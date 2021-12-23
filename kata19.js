@@ -6,17 +6,33 @@
 let whiteQueen = [0, 5];
 let blackQueen = [5, 0];
 
-const generateBoard = () => {
 // will return game board containing location of 2 queens
+const generateBoard = (wQueen, bQueen) => {
+let gameBoard = [];
+for (let i = 0; i < 8; i++) {
+  gameBoard.push([]);
 }
 
-const queenThreat = () => {
-// will return true or false
+for (let i = 0; i < 8; i++) {
+  for (let j = 0; j < 8; j++) {
+    // console.log("wq", wQueen[0])
+    // console.log("wq1", wQueen[1])
+    if (i === wQueen[0] && j === wQueen[1]) {
+      gameBoard[i].push(1);
+    } 
+      gameBoard[i].push(0);
+    }
+  }
+return gameBoard;
 }
+
+// const queenThreat = () => {
+// // will return true or false
+// }
 
 let generatedBoard = generateBoard(whiteQueen, blackQueen);
 console.log(generatedBoard);
-console.log(queenThreat(generatedBoard));
+// console.log(queenThreat(generatedBoard));
 
 // Expected Output
 // [
@@ -31,11 +47,11 @@ console.log(queenThreat(generatedBoard));
 // ]
 // true
 
-let whiteQueen = [0, 0];
-let blackQueen = [5, 7];
-let generatedBoard = generateBoard(whiteQueen, blackQueen);
-console.log(generatedBoard);
-console.log(queenThreat(generatedBoard));
+// let whiteQueen = [0, 0];
+// let blackQueen = [5, 7];
+// let generatedBoard = generateBoard(whiteQueen, blackQueen);
+// console.log(generatedBoard);
+// console.log(queenThreat(generatedBoard));
 
 // Expected Output
 // [
