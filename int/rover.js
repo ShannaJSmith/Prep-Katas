@@ -15,7 +15,10 @@ const rover = {
 
 // 2. Add functions/methods to support the command to move, and the command to change direction.
 const roverPosition = (command) => {
- 
+  // Add error handling
+  if (command !== 'M' && command !== 'L' && command !== 'R') {
+    return 'An invalid command has been entered!'
+  }
   if (command === 'M') {
     if (rover.direction === 'N') {
       rover.y = rover.y + 1
@@ -26,7 +29,7 @@ const roverPosition = (command) => {
     } else if (rover.direction === 'W') {
       rover.x = rover.x - 1
     }
-  } 
+  }
   if (command === 'L') {
     if (rover.direction === 'N') {
       rover.direction = 'W'
@@ -37,7 +40,7 @@ const roverPosition = (command) => {
     } else if (rover.direction === 'W') {
       rover.direction = 'S'
     }
-  } 
+  }
   if (command === 'R') {
     if (rover.direction === 'N') {
       rover.direction = 'E'
@@ -48,7 +51,7 @@ const roverPosition = (command) => {
     } else if (rover.direction === 'W') {
       rover.direction = 'N'
     }
-  } 
+  }
   // 3. Return the result, formatted as per the above
   let coordinates = `(${rover.x}, ${rover.y})`
   return `The rover's current coordinates are ${coordinates} and it is facing ${rover.direction}`
@@ -58,8 +61,10 @@ console.log(roverPosition('M'))
 console.log(roverPosition('M'))
 console.log(roverPosition('M'))
 console.log(roverPosition('M'))
+console.log(roverPosition('Right'))
 console.log(roverPosition('L'))
 console.log(roverPosition('L'))
+console.log(roverPosition('Left'))
 
 // The above state could be achieved by the following sequence:
 // Input: M
