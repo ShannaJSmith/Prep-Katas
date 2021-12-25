@@ -16,11 +16,9 @@ const rover = {
 
 // 2. Add functions/methods to support the command to move, and the command to change direction.
 const roverPosition = (command) => {
-  let coordinates = [];
+  let coordinates = `(${rover.x}, ${rover.y})`
 
 // 3. Return the result, formatted as per the above
-coordinates.push(rover.x, rover.y)
-console.log("coordinates:", coordinates)
 return console.log(`The rover's current coordinates are ${coordinates} and it is facing ${rover.direction}`)
 }
 
