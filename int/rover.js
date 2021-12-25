@@ -6,6 +6,28 @@
 // OUTPUT: The output for each rover should be its final co-ordinates and the direction.
 // i.e. The rover’s current coordinates are (0, 4) and it is facing S
 
+
+// 1. Design objects or functions to describe the Rover.
+const rover = {
+  x: 0,
+  y: 0,
+  direction: 'N'
+}
+
+// 2. Add functions/methods to support the command to move, and the command to change direction.
+const roverPosition = (command) => {
+  let coordinates = [];
+
+// 3. Return the result, formatted as per the above
+coordinates.push(rover.x, rover.y)
+console.log("coordinates:", coordinates)
+return console.log(`The rover's current coordinates are ${coordinates} and it is facing ${rover.direction}`)
+}
+
+console.log(roverPosition('M'))
+console.log(roverPosition('L'))
+console.log(roverPosition('R'))
+
 // The above state could be achieved by the following sequence:
 // Input: M
 // Output: The rover's current coordinates are (0, 1) and it is facing N
@@ -19,9 +41,3 @@
 // Output: The rover's current coordinates are (0, 4) and it is facing W
 // Input: L
 // Output: The rover's current coordinates are (0, 4) and it is facing S
-
-// Challenge
-// Note: It would be helpful to read and understand each of these before starting.
-// 1. Design objects or functions to describe the Rover.
-// 2. Add functions/methods to support the command to move, and the command to change direction.
-// 3. Return the result, formatted as per the above
