@@ -15,8 +15,7 @@ const rover = {
 
 // 2. Add functions/methods to support the command to move, and the command to change direction.
 const roverPosition = (command) => {
-  let coordinates = `(${rover.x}, ${rover.y})`
-
+ 
   if (command === 'M') {
     if (rover.direction === 'N') {
       rover.y = rover.y + 1
@@ -27,37 +26,31 @@ const roverPosition = (command) => {
     } else if (rover.direction === 'W') {
       rover.x = rover.x - 1
     }
-  } else {
-    return 'An invalid command was entered'
-  }
+  } 
   if (command === 'L') {
     if (rover.direction === 'N') {
-      rover.y = rover.y + 1
+      rover.direction = 'W'
     } else if (rover.direction === 'S') {
-      rover.y = rover.y - 1
+      rover.direction = 'E'
     } else if (rover.direction === 'E') {
-      rover.x = rover.x + 1
+      rover.direction = 'N'
     } else if (rover.direction === 'W') {
-      rover.x = rover.x - 1
+      rover.direction = 'S'
     }
-  } else {
-    return 'An invalid command was entered'
-  }
-  // if (command === 'R') {
-  //   if (rover.direction === 'N') {
-  //     rover.y = rover.y + 1
-  //   } else if (rover.direction === 'S') {
-  //     rover.y = rover.y - 1
-  //   } else if (rover.direction === 'E') {
-  //     rover.x = rover.x + 1
-  //   } else if (rover.direction === 'W') {
-  //     rover.x = rover.x - 1
-  //   }
-  // } else {
-  //   return "An invalid command was entered"
-  // }
-
+  } 
+  if (command === 'R') {
+    if (rover.direction === 'N') {
+      rover.direction = 'E'
+    } else if (rover.direction === 'S') {
+      rover.direction = 'W'
+    } else if (rover.direction === 'E') {
+      rover.direction = 'S'
+    } else if (rover.direction === 'W') {
+      rover.direction = 'N'
+    }
+  } 
   // 3. Return the result, formatted as per the above
+  let coordinates = `(${rover.x}, ${rover.y})`
   return `The rover's current coordinates are ${coordinates} and it is facing ${rover.direction}`
 }
 
@@ -67,7 +60,6 @@ console.log(roverPosition('M'))
 console.log(roverPosition('M'))
 console.log(roverPosition('L'))
 console.log(roverPosition('L'))
-console.log(roverPosition('R'))
 
 // The above state could be achieved by the following sequence:
 // Input: M
