@@ -6,23 +6,66 @@
 // OUTPUT: The output for each rover should be its final co-ordinates and the direction.
 // i.e. The rover’s current coordinates are (0, 4) and it is facing S
 
-
 // 1. Design objects or functions to describe the Rover.
 const rover = {
   x: 0,
   y: 0,
-  direction: 'N'
+  direction: 'N',
 }
 
 // 2. Add functions/methods to support the command to move, and the command to change direction.
 const roverPosition = (command) => {
   let coordinates = `(${rover.x}, ${rover.y})`
 
-// 3. Return the result, formatted as per the above
-return console.log(`The rover's current coordinates are ${coordinates} and it is facing ${rover.direction}`)
+  if (command === 'M') {
+    if (rover.direction === 'N') {
+      rover.y = rover.y + 1
+    } else if (rover.direction === 'S') {
+      rover.y = rover.y - 1
+    } else if (rover.direction === 'E') {
+      rover.x = rover.x + 1
+    } else if (rover.direction === 'W') {
+      rover.x = rover.x - 1
+    }
+  } else {
+    return 'An invalid command was entered'
+  }
+  if (command === 'L') {
+    if (rover.direction === 'N') {
+      rover.y = rover.y + 1
+    } else if (rover.direction === 'S') {
+      rover.y = rover.y - 1
+    } else if (rover.direction === 'E') {
+      rover.x = rover.x + 1
+    } else if (rover.direction === 'W') {
+      rover.x = rover.x - 1
+    }
+  } else {
+    return 'An invalid command was entered'
+  }
+  // if (command === 'R') {
+  //   if (rover.direction === 'N') {
+  //     rover.y = rover.y + 1
+  //   } else if (rover.direction === 'S') {
+  //     rover.y = rover.y - 1
+  //   } else if (rover.direction === 'E') {
+  //     rover.x = rover.x + 1
+  //   } else if (rover.direction === 'W') {
+  //     rover.x = rover.x - 1
+  //   }
+  // } else {
+  //   return "An invalid command was entered"
+  // }
+
+  // 3. Return the result, formatted as per the above
+  return `The rover's current coordinates are ${coordinates} and it is facing ${rover.direction}`
 }
 
 console.log(roverPosition('M'))
+console.log(roverPosition('M'))
+console.log(roverPosition('M'))
+console.log(roverPosition('M'))
+console.log(roverPosition('L'))
 console.log(roverPosition('L'))
 console.log(roverPosition('R'))
 
