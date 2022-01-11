@@ -33,3 +33,18 @@ console.log("answer", mod(obj))
 // console.log("keys:", Object.keys(obj))
 // console.log("values:", Object.values(obj))
 // console.log("entires:", Object.entries(obj))
+
+
+// const axios = require('axios');
+
+//   axios.get('https://coderbyte.com/api/challenges/json/json-cleaning')
+//   .then((response) => {
+//     const body = response.data
+//     delete body.name.middle;
+//     delete body.DOB;
+//     body.hobbies.splice(2);
+//     delete body.education.highschool;
+//   })
+//   .catch((error) => {
+//     console.log(error.message)
+//   })
