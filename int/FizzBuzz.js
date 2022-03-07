@@ -21,3 +21,44 @@
 // Constraints:
 
 // 1 <= n <= 104
+
+const fizzBuzz = (n) => {
+  const array = [];
+  for (let i = 1; i <= n; i++) {
+    const divisibleByThree = i % 3;
+    const divisibleByFive = i % 5;
+    if (divisibleByFive === 0 && divisibleByThree === 0) {
+      array.push('FizzBuzz');
+    } else if (divisibleByThree === 0) {
+      array.push('Fizz');
+    } else if (divisibleByFive === 0) {
+      array.push('Buzz');
+    } else {
+      array.push(String(i));
+    }
+  }
+  return array;
+};
+
+// const fizzBuzz = (n) => {
+//   let array = [];
+//   for (let i = 1; i <= n; i++) {
+//     let divisibleByThree = i % 3 === 0;
+//     let divisibleByFive = i % 5 === 0;
+//     if (!divisibleByFive && !divisibleByThree) {
+//       array.push(String(i));
+//     }
+//     if (divisibleByFive && divisibleByThree) {
+//       array.push('FizzBuzz');
+//     }
+//     if (divisibleByThree) {
+//       array.push('Fizz');
+//     }
+//     if (divisibleByFive) {
+//       array.push('Buzz');
+//     }
+//   }
+//   return array;
+// };
+
+console.log(fizzBuzz(5));
